@@ -1,18 +1,17 @@
 # 目录
-## 语言类
-### [C 指南]()
-### [shell 指南]()
+## Language
+### [C]()
+### [shell]()
 
-## 工具类
-### 调试工具
-#### [GDB 指南]()
+## Debug Tools
+### [GDB]()
 
-### 版本管理
-#### [Git 指南]()
+## Version Control
+### [Git]()
 
-### 编译
-#### [Makefile 指南]()
+## Compile
+### [Makefile]()
 
-## 嵌入式类
-### [Cortex-M3/M4 指南]()
+## Embed
+### [I2C Profile](./Embed/I2C/I2C.md)
 
