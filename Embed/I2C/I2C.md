@@ -39,22 +39,25 @@ I2C总线是一个多控制器总线，这意味着能够控制总线的多个�
 如果两个或多个控制器尝试将信息放置到总线上，第一个产生 1 的控制器将会在另一个产生 0 时失去仲裁。时钟信号在仲裁期间由控制器使用[线与](#线与wired-and)连接到SCL线产生的时钟的同步组合。
 
 在I2C总线上生成时钟信号是控制器的责任；当在总线上传送数据时每个控制器生成其自己的时钟信号。来自控制器的总线时钟信号只能在它们被慢速目标设备按下时钟线或在仲裁发生时由另一个控制器拉伸时被改变。
+
 I2C总线协议特性适用性
+
 M=mandatory; O=optional; n/a=not applicable
+
 |Feature|Single controller|Multi-controller|Target|
 |-------|-----------------|----------------|------|
-|START condition |M |M |M
-|STOP condition |M |M |M
-|Acknowledge |M |M |M
-|Synchronization |n/a |M |n/a
-|Arbitration |n/a |M |n/a
-|Clock stretching |O |O |O
-|7-bit target address |M |M |M
-|10-bit target address |O |O |O
-|General Call address |O |O |O
-|Software Reset |O |O |O
-|START byte |n/a |O |n/a
-|Device ID |n/a |n/a |O
+|START condition |M |M |M |
+|STOP condition |M |M |M |
+|Acknowledge |M |M |M |
+|Synchronization |n/a |M |n/a |
+|Arbitration |n/a |M |n/a |
+|Clock stretching |O |O |O |
+|7-bit target address |M |M |M |
+|10-bit target address |O |O |O |
+|General Call address |O |O |O |
+|Software Reset |O |O |O |
+|START byte |n/a |O |n/a |
+|Device ID |n/a |n/a |O |
     
 1. 也适用于控制器作为目标
 2. 时钟拉伸在一些目标上是一种特性。如果在系统中没有目标拉伸时钟，控制器就不需要被设计掌握这个程序。
